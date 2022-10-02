@@ -24,6 +24,7 @@ export default function Home () {
                 {/* fun-fact ::Link keyword. replace - does not allow user to go back to the previous page -  */ }
                 <li><Link href={ "/portfolio" }>Portfolio</Link></li>
                 <li><Link href={ '/clients' }>Clients</Link></li>
+
             </ul>
 
         </div>

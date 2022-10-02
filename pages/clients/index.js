@@ -16,7 +16,14 @@ export default function Clients () {
                 { clients.map ((client) => {
                     return (
                         <li key={ client.id }>
-                            <Link href={ `/clients/${ client.id }` }>{ client.name }</Link>
+                            {/* <Link href={ `/clients/${ client.id }` }>{ client.name }</Link> */ }
+                            {/* next.js provides an alternative method to setting the href using an object */ }
+                            {/* this allows the injection of different properties as demonstrated below  */ }
+                            <Link href={ {
+                                pathname: '/clients/[id]',
+                                query: { id: client.id },
+                            } }>{ client.name }</Link>
+
                         </li>
                     )
                 }) }
